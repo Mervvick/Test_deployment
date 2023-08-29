@@ -9,4 +9,4 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt && rm requirements.txt
 
 COPY . .
-ENTRYPOINT [ "streamlit", "run", "./app.py"]
+CMD [ "streamlit", "run", "./app.py"]
