@@ -13,7 +13,7 @@ RUN pip3 install -r requirements.txt
 
 
 
-EXPOSE PORT
+EXPOSE $PORT
 
 COPY . .
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.port= PORT", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port= $PORT", "--server.address=0.0.0.0"]
