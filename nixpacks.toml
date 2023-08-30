@@ -1,0 +1,3 @@
+
+[start]
+cmd = 'streamlit run app.py'
