@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y     build-essential     curl     softwa
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
-EXPOSE $PORT
+EXPOSE $80
 
 COPY . .
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=$PORT", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=$80", "--server.address=0.0.0.0"]
